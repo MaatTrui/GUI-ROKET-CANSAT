@@ -1,2 +1,2 @@
-# GUI-ROKET_CANSAT
+# GUI-ROKET-CANSAT
 Coming Soon
