@@ -3,10 +3,158 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:GUI_ROCKET_CANSAT"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="CANSAT ROCKET GUI" Height="720" Width="1280"
+        Background="#303030">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border Margin ="40 5"
+                Style="{StaticResource borderMain}"
+                Grid.Row="0"
+                Grid.RowSpan="2">
+            <Image Source="/LogoKampus.png"
+               Style="{StaticResource imageLogo}"/>
+        </Border>
+        <Border Margin ="40 5"
+                Style="{StaticResource borderMain}"
+                Grid.Row="2"
+                Grid.RowSpan="2">
+            <Image Source="/LogoTRUI.png"
+               Style="{StaticResource imageLogo}"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"/>
+        </Border>
+
+        <Border Style="{StaticResource borderMain}"
+                Grid.Row="4">
+            <Label x:Name="labelFlyTimer"
+                   Content="Flight Time    00:00:00"
+                   Style="{StaticResource fontMain}"
+                   VerticalAlignment="Center"/>
+        </Border>
+
+        <Border Margin ="10 5"
+                Style="{StaticResource borderMain}"
+                Grid.Row="5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Content="Altitude:          0000 m"
+                       Style="{StaticResource fontMain}"
+                       Margin="10 0"
+                       VerticalAlignment="Center"/>
+
+                <Label Content="Apogee:          0000 m"
+                       Style="{StaticResource fontMain}"
+                       Margin="10 0"
+                       Grid.Row="1"
+                       VerticalAlignment="Center"/>
+
+            </Grid>
+        </Border>
+
+        <Border Style="{StaticResource borderMain}"
+                Grid.Row="6">
+            <Label Content="Heading:         360°"
+                   Style="{StaticResource fontMain}"
+                   VerticalAlignment="Center"/>
+        </Border>
+
+        <Border Style="{StaticResource borderMain}"
+                Grid.Column="1"
+                Grid.Row="0"
+                Grid.RowSpan="7">
+            <Image Source="/cansat.png"
+               Style="{StaticResource imageLogo}"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"/>
+            <!--<view:Maps x:Name="Maps"/>-->
+        </Border>
+
+        <Border Style="{StaticResource borderMain}"
+                Grid.Column="2"
+                Grid.Row="0"
+                Grid.RowSpan="2">
+            <!--<view:AltitudeDistance x:Name="AltitudeDistance"/>-->
+        </Border>
+
+        <Border Style="{StaticResource borderMain}"
+                Grid.Column="2"
+                Grid.Row="2"
+                Grid.RowSpan="2">
+            <!--<view:RollPitchYaw x:Name="RollPitchYaw"/>-->
+        </Border>
+
+        <Border Style="{StaticResource borderMain}"
+                Grid.Column="2"
+                Grid.Row="4"
+                Grid.RowSpan="3">
+            <!--<Label Content="Acceleration and Gyro"
+                   Style="{StaticResource fontMain}"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"/>-->
+            <!--<view:AcceleroGyro x:Name="AcceleroGyro"/>-->
+        </Border>
+
+        <Border Style="{StaticResource borderMain}"
+                Grid.Column="3"
+                Grid.Row="0"
+                Grid.RowSpan="5">
+            <!--<Label Content="Tele-Command"
+                   Style="{StaticResource fontMain}"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"/>-->
+            <Image Source="/Sample High Altitude.png"
+                   Margin="10"/>
+        </Border>
+
+        <Border Style="{StaticResource borderMain}"
+                Grid.Column="3"
+                Grid.Row="5">
+            <Button Content="Tele-Command Button"
+                    Style="{StaticResource buttonMain}"
+                    Margin="5"/>
+        </Border>
+
+        <Border Style="{StaticResource borderMain}"
+                Grid.Column="3"
+                Grid.Row="6">
+            <Button Content="Extra Button"
+                    Style="{StaticResource buttonMain}"
+                    Margin="5"/>
+        </Border>
+
+        <Border Style="{StaticResource borderMain}"
+                Grid.Row="7"
+                Grid.RowSpan="2"
+                Grid.ColumnSpan="4">
+            <ScrollViewer  CanContentScroll="True" VerticalScrollBarVisibility="Auto">
+                <Label  x:Name="raw_data_label"
+                    Content="Nothing to Display"
+                    Style="{StaticResource fontMain}"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"/>
+            </ScrollViewer>
+        </Border>
     </Grid>
 </Window>

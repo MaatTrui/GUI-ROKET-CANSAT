@@ -94,5 +94,21 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
+    <Folder Include="ViewModel\" />
+    <Folder Include="View\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LogoKampus.png" />
+    <Resource Include="Images\LogoTRUI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LogoKampus.png" />
+    <Resource Include="LogoTRUI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cansat.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

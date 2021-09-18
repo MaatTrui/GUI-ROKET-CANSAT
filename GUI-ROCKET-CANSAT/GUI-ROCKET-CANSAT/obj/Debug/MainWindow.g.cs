@@ -48,7 +48,7 @@ namespace GUI_ROCKET_CANSAT {
         #line hidden
         
         
-        #line 152 "..\..\MainWindow.xaml"
+        #line 148 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label raw_data_label;
         
