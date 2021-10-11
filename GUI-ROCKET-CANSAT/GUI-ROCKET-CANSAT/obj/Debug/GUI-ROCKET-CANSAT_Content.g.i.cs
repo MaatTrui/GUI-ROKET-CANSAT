@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("cansat.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("flag-indonesia.jpg")]
 
 
