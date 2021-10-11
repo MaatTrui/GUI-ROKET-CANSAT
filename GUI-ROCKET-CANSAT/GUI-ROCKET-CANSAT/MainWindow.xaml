@@ -9,9 +9,10 @@
     <Grid Margin="10">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -25,136 +26,140 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Border Margin ="40 5"
+        <Border Margin ="20,20,20,20"
                 Style="{StaticResource borderMain}"
+                Grid.Column="0"
                 Grid.Row="0"
-                Grid.RowSpan="2">
-            <Image Source="/LogoKampus.png"
-               Style="{StaticResource imageLogo}"/>
-        </Border>
-        <Border Margin ="40 5"
-                Style="{StaticResource borderMain}"
-                Grid.Row="2"
-                Grid.RowSpan="2">
-            <Image Source="/LogoTRUI.png"
-               Style="{StaticResource imageLogo}"
-               HorizontalAlignment="Center"
-               VerticalAlignment="Center"/>
+                Grid.RowSpan="7"
+                Grid.ColumnSpan="2">
+
+            <Image Source="/cansat.png"
+               Style="{StaticResource imageLogo}" Margin="10"/>
         </Border>
 
         <Border Style="{StaticResource borderMain}"
-                Grid.Row="4">
-            <Label x:Name="labelFlyTimer"
-                   Content="Flight Time    00:00:00"
+                Grid.Row="7" Margin="37,10,37,10">
+            <Label Content="Altitude:          0000 m"
                    Style="{StaticResource fontMain}"
                    VerticalAlignment="Center"/>
         </Border>
 
-        <Border Margin ="10 5"
-                Style="{StaticResource borderMain}"
-                Grid.Row="5">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-
-                <Label Content="Altitude:          0000 m"
-                       Style="{StaticResource fontMain}"
-                       Margin="10 0"
-                       VerticalAlignment="Center"/>
-
-                <Label Content="Apogee:          0000 m"
-                       Style="{StaticResource fontMain}"
-                       Margin="10 0"
-                       Grid.Row="1"
-                       VerticalAlignment="Center"/>
-
-            </Grid>
+        <Border Style="{StaticResource borderMain}"
+                Grid.Row="7" Grid.Column="1" Margin="37,10,37,10">
+            <Label Content="Apogee:          0000 m"
+                   Style="{StaticResource fontMain}"
+                   VerticalAlignment="Center"/>
         </Border>
 
         <Border Style="{StaticResource borderMain}"
-                Grid.Row="6">
+                Grid.Row="8" Margin="37,10,37,10">
             <Label Content="Heading:         360°"
                    Style="{StaticResource fontMain}"
                    VerticalAlignment="Center"/>
         </Border>
 
         <Border Style="{StaticResource borderMain}"
-                Grid.Column="1"
-                Grid.Row="0"
-                Grid.RowSpan="7">
-            <Image Source="/cansat.png"
-               Style="{StaticResource imageLogo}"
-               HorizontalAlignment="Center"
-               VerticalAlignment="Center"/>
-            <!--<view:Maps x:Name="Maps"/>-->
-        </Border>
-
-        <Border Style="{StaticResource borderMain}"
-                Grid.Column="2"
-                Grid.Row="0"
-                Grid.RowSpan="2">
-            <!--<view:AltitudeDistance x:Name="AltitudeDistance"/>-->
-        </Border>
-
-        <Border Style="{StaticResource borderMain}"
-                Grid.Column="2"
-                Grid.Row="2"
-                Grid.RowSpan="2">
-            <!--<view:RollPitchYaw x:Name="RollPitchYaw"/>-->
-        </Border>
-
-        <Border Style="{StaticResource borderMain}"
-                Grid.Column="2"
-                Grid.Row="4"
-                Grid.RowSpan="3">
-            <!--<Label Content="Acceleration and Gyro"
+                Grid.Row="8" Grid.Column="1" Margin="37,10,37,10">
+            <Label Content="Flight Time:   00:00:00"
                    Style="{StaticResource fontMain}"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"/>-->
-            <!--<view:AcceleroGyro x:Name="AcceleroGyro"/>-->
+                   VerticalAlignment="Center"/>
         </Border>
 
-        <Border Style="{StaticResource borderMain}"
+        <Border Margin ="20,5,20,5"
+                Style="{StaticResource borderMain}"
+                Grid.Column="2"
+                Grid.Row="0"
+                Grid.RowSpan="3"
+                Grid.ColumnSpan="1" RenderTransformOrigin="0.5,0.5">
+
+
+            <Image Source="/LogoKampus.png"
+               Style="{StaticResource imageLogo}" Margin="10"/>
+        </Border>
+
+        <Border Margin ="20,5,20,5"
+                Style="{StaticResource borderMain}"
                 Grid.Column="3"
                 Grid.Row="0"
-                Grid.RowSpan="5">
-            <!--<Label Content="Tele-Command"
+                Grid.RowSpan="3"
+                Grid.ColumnSpan="1" RenderTransformOrigin="0.5,0.5">
+
+
+            <Image Source="/LogoTRUI.png"
+               Style="{StaticResource imageLogo}" Margin="10"/>
+        </Border>
+
+        <Border Style="{StaticResource borderMain}"
+                Grid.Row="3"
+                Grid.Column="2"
+                Grid.RowSpan="2"
+               Margin ="20,5,20,5">
+            <Label Content="Graph 1"
                    Style="{StaticResource fontMain}"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"/>-->
-            <Image Source="/Sample High Altitude.png"
-                   Margin="10"/>
+                   VerticalAlignment="Center"/>
+        </Border>
+
+        <Border Style="{StaticResource borderMain}"
+                Grid.Column="2"
+                Grid.Row="5">
+            <Button Content="Expand Button"
+                    Style="{StaticResource buttonMain}"
+                    Margin="5"/>
+        </Border>
+
+        <Border Style="{StaticResource borderMain}"
+                Grid.Row="3"
+                Grid.Column="3"
+                Grid.RowSpan="2"
+               Margin ="20,5,20,5">
+            <Label Content="Graph 2"
+                   Style="{StaticResource fontMain}"
+                   VerticalAlignment="Center"/>
         </Border>
 
         <Border Style="{StaticResource borderMain}"
                 Grid.Column="3"
                 Grid.Row="5">
-            <Button Content="Tele-Command Button"
+            <Button Content="Expand Button"
                     Style="{StaticResource buttonMain}"
                     Margin="5"/>
+        </Border>
+
+        <Border Style="{StaticResource borderMain}"
+                Grid.Row="6"
+                Grid.Column="2"
+                Grid.RowSpan="2"
+               Margin ="20,5,20,5">
+            <Label Content="Graph 3"
+                   Style="{StaticResource fontMain}"
+                   VerticalAlignment="Center"/>
+        </Border>
+
+        <Border Style="{StaticResource borderMain}"
+                Grid.Column="2"
+                Grid.Row="9">
+            <Button Content="Expand Button"
+                    Style="{StaticResource buttonMain}"
+                    Margin="5"/>
+        </Border>
+
+        <Border Style="{StaticResource borderMain}"
+                Grid.Row="6"
+                Grid.Column="3"
+                Grid.RowSpan="2"
+               Margin ="20,5,20,5">
+            <Label Content="Graph 4"
+                   Style="{StaticResource fontMain}"
+                   VerticalAlignment="Center"/>
         </Border>
 
         <Border Style="{StaticResource borderMain}"
                 Grid.Column="3"
-                Grid.Row="6">
-            <Button Content="Extra Button"
+                Grid.Row="9">
+            <Button Content="Expand Button"
                     Style="{StaticResource buttonMain}"
                     Margin="5"/>
         </Border>
 
-        <Border Style="{StaticResource borderMain}"
-                Grid.Row="7"
-                Grid.RowSpan="2"
-                Grid.ColumnSpan="4">
-            <ScrollViewer  CanContentScroll="True" VerticalScrollBarVisibility="Auto">
-                <Label  x:Name="raw_data_label"
-                    Content="Nothing to Display"
-                    Style="{StaticResource fontMain}"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Top"/>
-            </ScrollViewer>
-        </Border>
     </Grid>
 </Window>

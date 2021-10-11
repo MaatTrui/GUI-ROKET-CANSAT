@@ -24,5 +24,10 @@ namespace GUI_ROCKET_CANSAT
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
